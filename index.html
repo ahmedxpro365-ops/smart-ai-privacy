@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart AI — سياسة الخصوصية | Privacy Policy</title>
+<meta name="description" content="سياسة الخصوصية الرسمية لتطبيق Smart AI. تعرّف على البيانات التي نجمعها وكيف نحميها. Official privacy policy for the Smart AI app.">
+<meta name="theme-color" content="#FBFAFE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131318" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Smart AI — Privacy Policy">
+<meta property="og:description" content="How Smart AI collects, uses, and protects your data.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================================
+   Smart AI — Privacy Policy
+   Material Design 3 token system, light/dark, RTL/LTR aware
+   =========================================================== */
+
+/* ---------- Design tokens ---------- */
+:root{
+  /* Brand gradient */
+  --grad-a:#5B57F2;
+  --grad-b:#00B39A;
+
+  /* Type */
+  --font-ar:'Cairo', sans-serif;
+  --font-en:'Manrope', sans-serif;
+  --font-mono:'JetBrains Mono', monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --dur-s: 160ms;
+  --dur-m: 320ms;
+  --dur-l: 600ms;
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+
+  --shadow-1: 0 1px 2px rgba(20,18,40,.06), 0 1px 8px rgba(20,18,40,.05);
+  --shadow-2: 0 4px 16px rgba(20,18,40,.10);
+}
+
+/* Light tonal palette (MD3-style: deep tones on light surfaces) */
+:root,
+html[data-theme="light"]{
+  --primary: #4F46E0;
+  --on-primary: #FFFFFF;
+  --primary-container: #E4E0FF;
+  --on-primary-container: #14116B;
+
+  --secondary: #00897A;
+  --secondary-container: #C6F4EB;
+  --on-secondary-container: #003C34;
+
+  --surface: #FBFAFE;
+  --surface-container: #F2F0F9;
+  --surface-container-high: #E9E6F4;
+  --surface-container-highest: #E1DEF0;
+
+  --on-surface: #1B1B23;
+  --on-surface-variant: #49454F;
+  --outline: #79747E;
+  --outline-variant: #CAC4D0;
+}
+
+/* Dark tonal palette (MD3-style: lighter tones on dark surfaces) */
+html[data-theme="dark"]{
+  --primary: #C7C2FF;
+  --on-primary: #2A2479;
+  --primary-container: #3C3590;
+  --on-primary-container: #E4E0FF;
+
+  --secondary: #5FE0CB;
+  --secondary-container: #00504A;
+  --on-secondary-container: #B6F3E5;
+
+  --surface: #131218;
+  --surface-container: #1D1C24;
+  --surface-container-high: #27262F;
+  --surface-container-highest: #322F3A;
+
+  --on-surface: #E6E1E9;
+  --on-surface-variant: #C9C4D0;
+  --outline: #948F99;
+  --outline-variant: #49454F;
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 1px 8px rgba(0,0,0,.3);
+  --shadow-2: 0 6px 20px rgba(0,0,0,.45);
+}
+
+/* ---------- Reset ---------- */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+body{
+  margin:0;
+  background:var(--surface);
+  color:var(--on-surface);
+  font-family:var(--font-ar);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  transition:background var(--dur-m) var(--ease), color var(--dur-m) var(--ease);
+  overflow-x:hidden;
+}
+html[lang="en"] body{ font-family:var(--font-en); }
+.mono{ font-family:var(--font-mono); letter-spacing:.01em; }
+
+h1,h2,h3{ margin:0; font-weight:800; line-height:1.2; }
+p{ margin:0 0 .9em; line-height:1.85; color:var(--on-surface-variant); }
+p:last-child{ margin-bottom:0; }
+ul{ margin:0; padding:0; list-style:none; }
+
+a{ color:var(--primary); }
+
+.skip-link{
+  position:absolute; right:1rem; top:-3rem;
+  background:var(--primary); color:var(--on-primary);
+  padding:.6rem 1rem; border-radius:var(--r-sm); z-index:200;
+  transition:top var(--dur-s) var(--ease);
+}
+.skip-link:focus{ top:.6rem; }
+
+:focus-visible{
+  outline:2.5px solid var(--primary);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* ---------- Icon engine (inline svg injected via JS) ---------- */
+[data-icon]{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:1em; height:1em;
+}
+[data-icon] svg{ width:100%; height:100%; }
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky; top:0; z-index:100;
+  background:color-mix(in srgb, var(--surface) 78%, transparent);
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border-bottom:1px solid var(--outline-variant);
+}
+.header-inner{
+  max-width:1180px; margin:0 auto;
+  padding:.85rem 1.25rem;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem;
+}
+.brand{ display:flex; align-items:center; gap:.65rem; }
+.brand-mark{ display:inline-flex; line-height:0; flex-shrink:0; }
+.brand-mark svg{ display:block; }
+.brand-text{ display:flex; flex-direction:column; line-height:1.25; }
+.brand-text strong{ font-size:1.02rem; font-weight:800; letter-spacing:.01em; }
+.brand-text small{ font-size:.74rem; color:var(--on-surface-variant); font-weight:600; }
+
+.header-actions{ display:flex; align-items:center; gap:.5rem; }
+
+.icon-btn{
+  position:relative; overflow:hidden;
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.35rem;
+  width:42px; height:42px;
+  border-radius:var(--r-pill);
+  border:1px solid var(--outline-variant);
+  background:var(--surface-container);
+  color:var(--on-surface);
+  cursor:pointer;
+  font:inherit; font-weight:700; font-size:.78rem;
+  transition:background var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
+}
+.icon-btn:hover{ background:var(--surface-container-high); }
+.icon-btn:active{ transform:scale(.94); }
+#langToggle{ width:auto; padding-inline:.95rem; }
+
+.icon-sun,.icon-moon{ width:18px; height:18px; transition:opacity var(--dur-m) var(--ease), transform var(--dur-m) var(--ease); position:absolute; }
+html[data-theme="light"] .icon-moon,
+html[data-theme="dark"] .icon-sun{ opacity:0; transform:rotate(-90deg) scale(.5); position:absolute; }
+html[data-theme="light"] .icon-sun,
+html[data-theme="dark"] .icon-moon{ opacity:1; transform:rotate(0) scale(1); }
+
+/* Ripple */
+.ripple{ position:relative; }
+.ripple-circle{
+  position:absolute; border-radius:50%;
+  background:currentColor; opacity:.22;
+  transform:scale(0);
+  animation:rippleAnim 600ms var(--ease);
+  pointer-events:none;
+}
+@keyframes rippleAnim{ to{ transform:scale(2.6); opacity:0; } }
+
+/* ---------- Hero ---------- */
+.hero{ position:relative; overflow:hidden; }
+.hero::before{
+  content:""; position:absolute; inset:-20% -10% auto -10%; height:480px;
+  background:radial-gradient(60% 60% at 30% 20%, color-mix(in srgb, var(--grad-a) 18%, transparent), transparent 70%),
+             radial-gradient(50% 50% at 80% 10%, color-mix(in srgb, var(--grad-b) 16%, transparent), transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;
+  max-width:1180px; margin:0 auto;
+  padding:4.2rem 1.25rem 3rem;
+  display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:2.5rem;
+}
+.eyebrow-chip{
+  display:inline-flex; align-items:center; gap:.45rem;
+  padding:.4rem .9rem;
+  border-radius:var(--r-pill);
+  background:var(--secondary-container);
+  color:var(--on-secondary-container);
+  font-size:.8rem; font-weight:700;
+  margin-bottom:1.1rem;
+}
+.eyebrow-chip [data-icon]{ font-size:1em; }
+.hero-text h1{
+  font-size:clamp(2.4rem, 5vw, 3.4rem);
+  background:linear-gradient(90deg, var(--on-surface), var(--primary) 120%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero-sub{ font-size:1.06rem; max-width:46ch; margin-top:1rem; }
+.updated-chip{
+  display:inline-flex; align-items:center; gap:.5rem;
+  margin-top:1.6rem;
+  padding:.55rem 1rem;
+  border:1px solid var(--outline-variant);
+  border-radius:var(--r-pill);
+  background:var(--surface-container);
+  font-size:.84rem; color:var(--on-surface-variant);
+}
+.updated-chip [data-icon]{ color:var(--primary); }
+.updated-chip time{ color:var(--on-surface); font-weight:600; }
+
+.hero-visual{ position:relative; aspect-ratio:1/1; max-width:340px; justify-self:center; }
+.hero-visual svg{ width:100%; height:100%; overflow:visible; }
+.node-link line{ stroke:var(--outline-variant); stroke-width:1.4; }
+.node-core{ fill:var(--primary-container); stroke:var(--primary); stroke-width:1.6; animation:pulseCore 3.6s ease-in-out infinite; transform-origin:160px 160px; }
+.node-shield path{ fill:var(--primary); }
+.node-dot{ fill:var(--secondary); animation:floatDot 4.5s ease-in-out infinite; }
+.node-dot:nth-of-type(1){ animation-delay:.1s; }
+.node-dot:nth-of-type(2){ animation-delay:.6s; }
+.node-dot:nth-of-type(3){ animation-delay:1.1s; }
+.node-dot:nth-of-type(4){ animation-delay:1.6s; }
+.node-dot:nth-of-type(5){ animation-delay:2.1s; }
+@keyframes pulseCore{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.06); } }
+@keyframes floatDot{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-6px); } }
+
+/* ---------- Mobile TOC ---------- */
+.toc-mobile{
+  position:sticky; top:64px; z-index:90;
+  display:none;
+  background:color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--outline-variant);
+}
+.toc-mobile-track{
+  display:flex; gap:.5rem;
+  padding:.7rem 1rem;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.toc-mobile-track::-webkit-scrollbar{ display:none; }
+.toc-chip{
+  flex:0 0 auto;
+  padding:.45rem .9rem;
+  border-radius:var(--r-pill);
+  border:1px solid var(--outline-variant);
+  background:var(--surface-container);
+  color:var(--on-surface-variant);
+  font-size:.8rem; font-weight:700;
+  cursor:pointer; white-space:nowrap;
+  transition:background var(--dur-s) var(--ease), color var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease);
+}
+.toc-chip.is-active{
+  background:var(--primary); color:var(--on-primary); border-color:var(--primary);
+}
+
+/* ---------- Layout ---------- */
+.layout{
+  max-width:1180px; margin:0 auto;
+  padding:1rem 1.25rem 2rem;
+  display:grid; grid-template-columns:240px 1fr; gap:2.5rem;
+  align-items:start;
+}
+
+/* TOC rail (desktop) */
+.toc-rail{ position:sticky; top:84px; align-self:start; }
+.toc-heading{
+  font-size:.74rem; font-weight:800; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--on-surface-variant);
+  margin:0 0 1rem;
+}
+.toc-track{ position:relative; padding-inline-start:1.1rem; }
+html[dir="rtl"] .toc-track{ padding-inline-start:0; padding-inline-end:1.1rem; }
+.toc-track::before{
+  content:""; position:absolute; inset-inline-start:4px; top:6px; bottom:6px;
+  width:2px; background:var(--outline-variant); border-radius:2px;
+}
+.toc-progress{
+  position:absolute; inset-inline-start:4px; top:6px; width:2px; height:0;
+  background:linear-gradient(var(--grad-a), var(--grad-b));
+  border-radius:2px;
+  transition:height var(--dur-m) var(--ease);
+}
+.toc-list{ display:flex; flex-direction:column; gap:.05rem; }
+.toc-item{ position:relative; }
+.toc-item a{
+  position:relative;
+  display:block;
+  padding:.5rem .25rem .5rem 1.3rem;
+  font-size:.85rem; font-weight:600;
+  color:var(--on-surface-variant);
+  text-decoration:none;
+  transition:color var(--dur-s) var(--ease);
+}
+html[dir="rtl"] .toc-item a{ padding:.5rem 1.3rem .5rem .25rem; }
+.toc-item a::before{
+  content:""; position:absolute; inset-inline-start:0; top:50%; translate:0 -50%;
+  width:9px; height:9px; border-radius:50%;
+  background:var(--surface); border:2px solid var(--outline-variant);
+  transition:all var(--dur-s) var(--ease);
+}
+.toc-item.is-active a{ color:var(--primary); }
+.toc-item.is-active a::before{
+  border-color:var(--primary); background:var(--primary);
+  box-shadow:0 0 0 4px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+/* ---------- Cards ---------- */
+main{ display:flex; flex-direction:column; gap:1.1rem; min-width:0; }
+.policy-card{
+  padding-bottom:1.7rem;
+  border-bottom:1px solid var(--outline-variant);
+  scroll-margin-top:120px;
+  opacity:0; transform:translateY(18px);
+  transition:opacity var(--dur-l) var(--ease), transform var(--dur-l) var(--ease), border-color var(--dur-m) var(--ease);
+}
+.policy-card:last-child{ border-bottom:0; padding-bottom:0; }
+.policy-card.is-visible{ opacity:1; transform:translateY(0); }
+.policy-card h2{
+  display:flex; align-items:center; gap:.7rem;
+  font-size:1.18rem;
+  margin-bottom:.8rem;
+  color:var(--on-surface);
+}
+.policy-card h2 .icon-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:1.5rem; height:1.5rem; flex:0 0 auto;
+  color:var(--primary); font-size:1.4rem;
+}
+.policy-card h2 .num{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:2.1rem; height:2.1rem; padding:0 .3rem;
+  border-radius:var(--r-sm);
+  background:var(--primary-container); color:var(--on-primary-container);
+  font-size:.78rem; font-weight:700;
+}
+.policy-list{ display:flex; flex-direction:column; gap:.6rem; margin-top:.4rem; }
+.policy-list li{
+  display:flex; align-items:flex-start; gap:.65rem;
+  font-size:.96rem; line-height:1.7; color:var(--on-surface-variant);
+}
+.policy-list li::before{
+  content:""; flex:0 0 auto; margin-top:.55em;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--secondary);
+}
+.note{
+  margin-top:1rem; padding:.85rem 1rem;
+  background:var(--surface-container-high);
+  border-inline-start:3px solid var(--secondary);
+  border-radius:var(--r-sm);
+  font-size:.88rem !important;
+}
+
+.contact-email{
+  display:inline-block; margin:.9rem 0 .2rem;
+  padding:.6rem 1.1rem;
+  background:var(--surface); border:1px solid var(--outline-variant);
+  border-radius:var(--r-pill);
+  font-weight:600; font-size:.92rem;
+  text-decoration:none;
+  transition:transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
+}
+.contact-email:hover{ transform:translateY(-2px); box-shadow:var(--shadow-2); }
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top:1px solid var(--outline-variant);
+  margin-top:2rem;
+}
+.footer-inner{
+  max-width:1180px; margin:0 auto;
+  padding:1.8rem 1.25rem 2.4rem;
+  display:flex; align-items:center; gap:.7rem;
+  color:var(--on-surface-variant); font-size:.86rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px){
+  .hero-inner{ grid-template-columns:1fr; text-align:center; }
+  .hero-text h1{ font-size:clamp(2rem,8vw,2.7rem); }
+  .hero-sub{ margin-inline:auto; }
+  .hero-visual{ max-width:240px; order:-1; }
+  .layout{ grid-template-columns:1fr; }
+  .toc-rail{ display:none; }
+  .toc-mobile{ display:block; }
+}
+
+@media (max-width: 560px){
+  .header-inner{ padding:.7rem 1rem; }
+  .brand-text small{ display:none; }
+  .hero-inner{ padding:2.6rem 1rem 2rem; }
+  .policy-card{ padding-bottom:1.4rem; }
+  .layout{ padding:.85rem 1rem 1.5rem; }
+}
+
+/* Print */
+@media print{
+  .site-header,.toc-rail,.toc-mobile,.hero-visual,.header-actions{ display:none !important; }
+  .policy-card{ box-shadow:none; opacity:1; transform:none; break-inside:avoid; }
+}
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">تخطي إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-text">
+        <strong>Smart AI</strong>
+        <small data-i18n="header.tag">سياسة الخصوصية</small>
+      </span>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn ripple" id="langToggle" type="button" aria-label="Toggle language">
+        <span class="lang-current">AR</span>
+      </button>
+      <button class="icon-btn ripple" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span data-icon="sun" class="icon-sun" aria-hidden="true"></span>
+        <span data-icon="moon" class="icon-moon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow-chip">
+        <span data-icon="shield" aria-hidden="true"></span>
+        <span data-i18n="hero.eyebrow">حماية بياناتك أولويتنا</span>
+      </span>
+      <h1 data-i18n="hero.title">سياسة الخصوصية</h1>
+      <p class="hero-sub" data-i18n="hero.sub">نوضح هنا بشفافية كاملة ما الذي يجمعه تطبيق Smart AI، وكيف يُستخدم، وكيف تتحكم فيه.</p>
+      <div class="updated-chip">
+        <span data-icon="refresh" aria-hidden="true"></span>
+        <span data-i18n="hero.updatedLabel">آخر تحديث:</span>
+        <time id="updatedDate" class="mono"></time>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 320 320" width="100%" height="100%">
+        <g class="node-link" stroke-linecap="round">
+          <line x1="160" y1="160" x2="70" y2="90"></line>
+          <line x1="160" y1="160" x2="250" y2="80"></line>
+          <line x1="160" y1="160" x2="60" y2="220"></line>
+          <line x1="160" y1="160" x2="245" y2="235"></line>
+          <line x1="160" y1="160" x2="160" y2="50"></line>
+        </g>
+        <circle class="node-core" cx="160" cy="160" r="34"></circle>
+        <g class="node-shield">
+          <path d="M160 142 L172 148 L172 162 C172 172 166 178 160 181 C154 178 148 172 148 162 L148 148 Z"></path>
+        </g>
+        <circle class="node-dot" cx="70" cy="90" r="9"></circle>
+        <circle class="node-dot" cx="250" cy="80" r="7"></circle>
+        <circle class="node-dot" cx="60" cy="220" r="8"></circle>
+        <circle class="node-dot" cx="245" cy="235" r="9"></circle>
+        <circle class="node-dot" cx="160" cy="50" r="6"></circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOBILE TOC ============ -->
+<nav class="toc-mobile" aria-label="Sections">
+  <div class="toc-mobile-track" id="tocMobileTrack"></div>
+</nav>
+
+<!-- ============ MAIN LAYOUT ============ -->
+<div class="layout">
+
+  <aside class="toc-rail" aria-label="Table of contents">
+    <div class="toc-rail-inner">
+      <p class="toc-heading" data-i18n="toc.heading">محتويات السياسة</p>
+      <div class="toc-track">
+        <div class="toc-progress" id="tocProgress"></div>
+        <ol class="toc-list" id="tocList"></ol>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <article class="policy-card" id="intro">
+      <h2><span class="icon-badge" data-icon="doc" aria-hidden="true"></span><span class="num mono">01</span><span data-i18n="intro.title">مقدمة</span></h2>
+      <p data-i18n="intro.body"></p>
+    </article>
+
+    <article class="policy-card" id="data-collected">
+      <h2><span class="icon-badge" data-icon="database" aria-hidden="true"></span><span class="num mono">02</span><span data-i18n="data.title">البيانات التي نجمعها</span></h2>
+      <p data-i18n="data.intro"></p>
+      <ul class="policy-list" id="dataList"></ul>
+      <p class="note" data-i18n="data.note"></p>
+    </article>
+
+    <article class="policy-card" id="google-signin">
+      <h2><span class="icon-badge" data-icon="login" aria-hidden="true"></span><span class="num mono">03</span><span data-i18n="google.title">تسجيل الدخول عبر Google</span></h2>
+      <p data-i18n="google.body"></p>
+    </article>
+
+    <article class="policy-card" id="firebase">
+      <h2><span class="icon-badge" data-icon="cloud" aria-hidden="true"></span><span class="num mono">04</span><span data-i18n="firebase.title">Firebase</span></h2>
+      <p data-i18n="firebase.intro"></p>
+      <ul class="policy-list" id="firebaseList"></ul>
+    </article>
+
+    <article class="policy-card" id="ai-providers">
+      <h2><span class="icon-badge" data-icon="key" aria-hidden="true"></span><span class="num mono">05</span><span data-i18n="providers.title">مزودو الذكاء الاصطناعي</span></h2>
+      <p data-i18n="providers.intro"></p>
+      <ul class="policy-list" id="providersList"></ul>
+    </article>
+
+    <article class="policy-card" id="web-search">
+      <h2><span class="icon-badge" data-icon="search" aria-hidden="true"></span><span class="num mono">06</span><span data-i18n="search.title">البحث على الإنترنت</span></h2>
+      <p data-i18n="search.body"></p>
+    </article>
+
+    <article class="policy-card" id="images">
+      <h2><span class="icon-badge" data-icon="image" aria-hidden="true"></span><span class="num mono">07</span><span data-i18n="images.title">الصور</span></h2>
+      <p data-i18n="images.body"></p>
+    </article>
+
+    <article class="policy-card" id="files">
+      <h2><span class="icon-badge" data-icon="file" aria-hidden="true"></span><span class="num mono">08</span><span data-i18n="files.title">الملفات</span></h2>
+      <p data-i18n="files.body"></p>
+    </article>
+
+    <article class="policy-card" id="security">
+      <h2><span class="icon-badge" data-icon="lock" aria-hidden="true"></span><span class="num mono">09</span><span data-i18n="security.title">أمان البيانات</span></h2>
+      <p data-i18n="security.body"></p>
+    </article>
+
+    <article class="policy-card" id="children">
+      <h2><span class="icon-badge" data-icon="child" aria-hidden="true"></span><span class="num mono">10</span><span data-i18n="children.title">خصوصية الأطفال</span></h2>
+      <p data-i18n="children.body"></p>
+    </article>
+
+    <article class="policy-card" id="third-party">
+      <h2><span class="icon-badge" data-icon="link" aria-hidden="true"></span><span class="num mono">11</span><span data-i18n="thirdParty.title">خدمات الطرف الثالث</span></h2>
+      <p data-i18n="thirdParty.intro"></p>
+      <ul class="policy-list" id="thirdPartyList"></ul>
+      <p class="note" data-i18n="thirdParty.note"></p>
+    </article>
+
+    <article class="policy-card" id="changes">
+      <h2><span class="icon-badge" data-icon="refresh" aria-hidden="true"></span><span class="num mono">12</span><span data-i18n="changes.title">التغييرات على السياسة</span></h2>
+      <p data-i18n="changes.body"></p>
+    </article>
+
+    <article class="policy-card policy-card--contact" id="contact">
+      <h2><span class="icon-badge" data-icon="mail" aria-hidden="true"></span><span class="num mono">13</span><span data-i18n="contact.title">تواصل معنا</span></h2>
+      <p data-i18n="contact.body"></p>
+      <a class="contact-email mono" href="mailto:ahmedxpro365@gmail.com">ahmedxpro365@gmail.com</a>
+    </article>
+
+  </main>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© <span id="year"></span> Smart AI — <span data-i18n="footer.rights">جميع الحقوق محفوظة</span></p>
+  </div>
+</footer>
+
+<script>
+/* ===========================================================
+   Smart AI — Privacy Policy
+   Vanilla JS: i18n, theme, scrollspy nav rail, motion
+   =========================================================== */
+(function () {
+  "use strict";
+
+  /* ---------------- Icons ---------------- */
+  var ICON_PATHS = {
+    shield:   '<path d="M12 3l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V6l7-3z"/>',
+    refresh:  '<path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/>',
+    doc:      '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>',
+    database: '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>',
+    login:    '<path d="M15 4h4v16h-4"/><path d="M3 12h12"/><path d="M11 7l5 5-5 5"/>',
+    cloud:    '<path d="M7 18h10a4 4 0 0 0 .4-8 6 6 0 0 0-11.6 1.5A4.5 4.5 0 0 0 7 18z"/>',
+    key:      '<circle cx="8" cy="14" r="4"/><path d="M11 11l8-8m-3 3l2 2m-5 1l2 2"/>',
+    search:   '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
+    image:    '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-6-6-4 4-2-2-6 6"/>',
+    file:     '<path d="M19 11l-7.5 7.5a4 4 0 0 1-5.7-5.7L13 5.6a2.7 2.7 0 0 1 3.8 3.8L9.6 16.6a1.3 1.3 0 0 1-1.9-1.9L14 8.4"/>',
+    lock:     '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+    child:    '<circle cx="12" cy="7" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3"/>',
+    link:     '<path d="M9 15l6-6"/><path d="M13 5l1.5-1.5a3.5 3.5 0 1 1 5 5L18 10"/><path d="M11 19l-1.5 1.5a3.5 3.5 0 1 1-5-5L6 14"/>',
+    mail:     '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+    sun:      '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>',
+    moon:     '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>'
+  };
+
+  function svgFor(name) {
+    var d = ICON_PATHS[name];
+    if (!d) return "";
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+      'stroke-linecap="round" stroke-linejoin="round">' + d + "</svg>";
+  }
+
+  function paintIcons(root) {
+    (root || document).querySelectorAll("[data-icon]").forEach(function (el) {
+      var name = el.getAttribute("data-icon");
+      // skip the theme-toggle sun/moon wrappers, handled separately below
+      if (el.classList.contains("icon-sun")) { el.innerHTML = svgFor("sun"); return; }
+      if (el.classList.contains("icon-moon")) { el.innerHTML = svgFor("moon"); return; }
+      el.innerHTML = svgFor(name);
+    });
+  }
+
+  /* ---------------- Section map (id -> icon, used for TOC + mobile chips) ---------------- */
+  var SECTIONS = [
+    { id: "intro",          icon: "doc",      titleKey: "intro.title" },
+    { id: "data-collected", icon: "database", titleKey: "data.title" },
+    { id: "google-signin",  icon: "login",    titleKey: "google.title" },
+    { id: "firebase",       icon: "cloud",    titleKey: "firebase.title" },
+    { id: "ai-providers",   icon: "key",      titleKey: "providers.title" },
+    { id: "web-search",     icon: "search",   titleKey: "search.title" },
+    { id: "images",         icon: "image",    titleKey: "images.title" },
+    { id: "files",          icon: "file",     titleKey: "files.title" },
+    { id: "security",       icon: "lock",     titleKey: "security.title" },
+    { id: "children",       icon: "child",    titleKey: "children.title" },
+    { id: "third-party",    icon: "link",     titleKey: "thirdParty.title" },
+    { id: "changes",        icon: "refresh",  titleKey: "changes.title" },
+    { id: "contact",        icon: "mail",     titleKey: "contact.title" }
+  ];
+
+  /* ---------------- i18n dictionary ---------------- */
+  var I18N = {
+    ar: {
+      "a11y.skip": "تخطي إلى المحتوى",
+      "header.tag": "سياسة الخصوصية",
+      "hero.eyebrow": "حماية بياناتك أولويتنا",
+      "hero.title": "سياسة الخصوصية",
+      "hero.sub": "نوضح هنا بشفافية كاملة ما الذي يجمعه تطبيق Smart AI، وكيف يُستخدم، وكيف تتحكم فيه.",
+      "hero.updatedLabel": "آخر تحديث:",
+      "toc.heading": "محتويات السياسة",
+
+      "intro.title": "مقدمة",
+      "intro.body": "ترحّب بك Smart AI، التطبيق المصمَّم لمساعدتك بالذكاء الاصطناعي بأسلوب آمن وموثوق. نحن نأخذ خصوصيتك على محمل الجد، ونلتزم بمبدأ الحد الأدنى من البيانات: لا نجمع سوى ما هو ضروري فعليًا لتشغيل التطبيق وتقديم تجربة سلسة لك. توضح هذه الصفحة بشفافية كاملة نوع البيانات التي قد تُجمع، والغرض من استخدامها، والخيارات المتاحة لك للتحكم فيها.",
+
+      "data.title": "البيانات التي نجمعها",
+      "data.intro": "اعتمادًا على الميزات التي تستخدمها داخل التطبيق، قد نقوم بجمع بعض أو كل العناصر التالية:",
+      "data.items": [
+        "الاسم، كما هو مسجَّل في حسابك على Google.",
+        "البريد الإلكتروني، عند تسجيل الدخول عبر حساب Google.",
+        "صورة الحساب الشخصية، إذا وفّرها Google ضمن بيانات الحساب.",
+        "إعدادات التطبيق، مثل تفضيلات الواجهة واللغة والنموذج المختار.",
+        "محتوى المحادثات، فقط في حال قمت بتفعيل ميزة المزامنة السحابية.",
+        "معلومات أساسية عن الجهاز (مثل نوع النظام والإصدار)، اللازمة لتشغيل التطبيق بشكل صحيح.",
+        "سجلات الأعطال (Crash Logs)، إذا قمت بتفعيل هذه الميزة، وذلك لتحسين استقرار التطبيق."
+      ],
+      "data.note": "نحن لا نجمع أي بيانات غير ضرورية، ولا نطلب أي صلاحيات لا تخدم وظيفة فعلية داخل التطبيق.",
+
+      "google.title": "تسجيل الدخول عبر Google",
+      "google.body": "يستخدم Smart AI تسجيل الدخول عبر Google (Google Sign-In) باعتباره الوسيلة الوحيدة للدخول إلى حسابك. عند تسجيل الدخول، تتم مشاركة بيانات أساسية مثل الاسم والبريد الإلكتروني والصورة الشخصية من حساب Google الخاص بك، وذلك وفقًا لإعدادات الخصوصية التي وافقت عليها مسبقًا مع Google. يخضع استخدام هذه البيانات أيضًا لسياسة خصوصية Google.",
+
+      "firebase.title": "Firebase",
+      "firebase.intro": "نعتمد على منصة Firebase (المملوكة لشركة Google) في تشغيل عدد من الوظائف الأساسية داخل التطبيق، وتشمل:",
+      "firebase.items": [
+        "Authentication: لإدارة عملية تسجيل الدخول والتحقق من هوية المستخدم بأمان.",
+        "Cloud Sync: لمزامنة محادثاتك وإعداداتك عبر أجهزتك المختلفة، وذلك فقط إذا قمت بتفعيلها.",
+        "Analytics: لجمع إحصاءات استخدام عامة وغير شخصية تساعدنا على تطوير التطبيق، إذا كانت مفعّلة.",
+        "Crash Reporting: لرصد الأعطال التقنية وإصلاحها بسرعة، إذا كانت مفعّلة."
+      ],
+
+      "providers.title": "مزوّدو الذكاء الاصطناعي",
+      "providers.intro": "يتيح لك Smart AI إضافة مفتاح API خاص بك من مزود الذكاء الاصطناعي الذي تختاره. وفي هذا الإطار نؤكد على ما يلي:",
+      "providers.items": [
+        "مفتاح الـ API الخاص بك يبقى ملكًا لك وحدك، ويُستخدم فقط لتنفيذ طلباتك.",
+        "لا تتم مشاركة مفتاحك مع أي مستخدم آخر للتطبيق تحت أي ظرف.",
+        "يُستخدم المفتاح حصريًا لإرسال طلباتك إلى مزود الذكاء الاصطناعي الذي اخترته بنفسك.",
+        "أنت مسؤول عن الحفاظ على سرية مفتاحك، وعن الالتزام بشروط استخدام المزود الذي اخترته."
+      ],
+
+      "search.title": "البحث على الإنترنت",
+      "search.body": "تتم عملية البحث على الإنترنت داخل Smart AI فقط عندما تطلب ذلك صراحةً، أو عند تفعيلك لميزة البحث ضمن إعدادات المحادثة. لا يقوم التطبيق بإجراء أي عمليات بحث تلقائية أو خلفية دون علمك.",
+
+      "images.title": "الصور",
+      "images.body": "عند إرسال صورة داخل المحادثة، تُستخدم هذه الصورة فقط لمعالجة طلبك الحالي عبر نموذج الذكاء الاصطناعي الذي اخترته، ولا يتم استخدامها لأي غرض آخر خارج نطاق هذا الطلب.",
+
+      "files.title": "الملفات",
+      "files.body": "أي ملف تقوم برفعه داخل التطبيق يُستخدم حصريًا للإجابة على طلبك المرتبط به، ولا يتم الاحتفاظ به أو استخدامه لأغراض أخرى بعد معالجة الطلب.",
+
+      "security.title": "أمان البيانات",
+      "security.body": "نتّخذ إجراءات تقنية وتنظيمية مناسبة لحماية بياناتك، تشمل التشفير أثناء النقل، والاعتماد على بنية Firebase الآمنة من Google، وتقييد الوصول إلى البيانات على الأشخاص المخوّلين فقط. ومع ذلك، لا توجد وسيلة نقل أو تخزين إلكتروني آمنة بنسبة 100%، ونعمل باستمرار على تطوير ممارساتنا الأمنية.",
+
+      "children.title": "خصوصية الأطفال",
+      "children.body": "لا يستهدف Smart AI الأطفال دون السن الذي تحدده القوانين المحلية المعمول بها. في حال استخدام التطبيق من قبل قاصر، يجب أن يتم ذلك تحت إشراف ولي الأمر. إذا تبيّن لنا أننا جمعنا بيانات من طفل دون الحصول على موافقة ولي الأمر اللازمة، سنعمل على حذف هذه البيانات في أقرب وقت ممكن.",
+
+      "thirdParty.title": "خدمات الطرف الثالث",
+      "thirdParty.intro": "يعتمد Smart AI على عدد من الخدمات الخارجية الموثوقة لتشغيل ميزاته، وتشمل:",
+      "thirdParty.items": [
+        "Google — لتسجيل الدخول وإدارة الحساب.",
+        "Firebase — للبنية التحتية والمزامنة والتحليلات.",
+        "مزوّدو الذكاء الاصطناعي الذين تختارهم بنفسك، عبر مفتاح الـ API الخاص بك."
+      ],
+      "thirdParty.note": "تخضع هذه الخدمات لسياسات الخصوصية الخاصة بها، وننصحك بالاطلاع عليها.",
+
+      "changes.title": "التغييرات على هذه السياسة",
+      "changes.body": "قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس أي تغييرات في التطبيق أو في المتطلبات القانونية. سيظهر تاريخ آخر تحديث أعلى هذه الصفحة تلقائيًا، وفي حال إجراء تغييرات جوهرية، سنحرص على إعلامك داخل التطبيق.",
+
+      "contact.title": "تواصل معنا",
+      "contact.body": "إذا كانت لديك أي أسئلة أو استفسارات بخصوص سياسة الخصوصية هذه أو طريقة تعاملنا مع بياناتك، يسعدنا تواصلك معنا عبر البريد الإلكتروني التالي:",
+
+      "footer.rights": "جميع الحقوق محفوظة"
+    },
+
+    en: {
+      "a11y.skip": "Skip to content",
+      "header.tag": "Privacy Policy",
+      "hero.eyebrow": "Your data, protected by design",
+      "hero.title": "Privacy Policy",
+      "hero.sub": "A clear, transparent look at what Smart AI collects, how it's used, and how you stay in control.",
+      "hero.updatedLabel": "Last updated:",
+      "toc.heading": "On this page",
+
+      "intro.title": "Introduction",
+      "intro.body": "Welcome to Smart AI, an app built to help you with AI in a safe and trustworthy way. We take your privacy seriously and follow a data-minimization principle: we only collect what's genuinely necessary to run the app and give you a smooth experience. This page explains, in full transparency, what data may be collected, why it's used, and the choices you have to control it.",
+
+      "data.title": "Information We Collect",
+      "data.intro": "Depending on the features you use inside the app, we may collect some or all of the following:",
+      "data.items": [
+        "Your name, as registered on your Google account.",
+        "Your email address, when you sign in with Google.",
+        "Your profile picture, if provided by Google as part of your account data.",
+        "App settings, such as interface preferences, language, and the model you've selected.",
+        "Conversation content, only if you've enabled cloud sync.",
+        "Basic device information (such as OS type and version), needed for the app to run correctly.",
+        "Crash logs, if you've enabled this feature, to help us improve app stability."
+      ],
+      "data.note": "We never collect unnecessary data, and we never request permissions that don't serve a real function in the app.",
+
+      "google.title": "Google Sign-In",
+      "google.body": "Smart AI uses Google Sign-In as the sole method to access your account. When you sign in, basic information such as your name, email, and profile picture is shared from your Google account, according to the privacy settings you've already agreed to with Google. The use of this data is also governed by Google's own privacy policy.",
+
+      "firebase.title": "Firebase",
+      "firebase.intro": "We rely on Firebase, a platform owned by Google, to power several core functions in the app, including:",
+      "firebase.items": [
+        "Authentication — to securely manage sign-in and verify your identity.",
+        "Cloud Sync — to sync your conversations and settings across your devices, only if you've turned it on.",
+        "Analytics — to collect general, non-personal usage statistics that help us improve the app, if enabled.",
+        "Crash Reporting — to detect and quickly fix technical issues, if enabled."
+      ],
+
+      "providers.title": "AI Providers",
+      "providers.intro": "Smart AI lets you add your own API key from the AI provider of your choice. In doing so, we confirm the following:",
+      "providers.items": [
+        "Your API key remains entirely yours, and is used solely to carry out your own requests.",
+        "Your key is never shared with any other user of the app, under any circumstance.",
+        "The key is used exclusively to send your requests to the AI provider you personally selected.",
+        "You're responsible for keeping your key confidential and for complying with the terms of the provider you've chosen."
+      ],
+
+      "search.title": "Web Search",
+      "search.body": "Web searches within Smart AI are only performed when you explicitly request one, or when you enable the search feature within a conversation's settings. The app never performs automatic or background searches without your knowledge.",
+
+      "images.title": "Images",
+      "images.body": "When you send an image in a conversation, it's used solely to process your current request through the AI model you've selected, and is not used for any purpose beyond that request.",
+
+      "files.title": "Files",
+      "files.body": "Any file you upload within the app is used exclusively to answer the request it's attached to, and is not retained or used for any other purpose once that request has been processed.",
+
+      "security.title": "Data Security",
+      "security.body": "We apply appropriate technical and organizational measures to protect your data, including encryption in transit, reliance on Google's secure Firebase infrastructure, and restricting data access to authorized personnel only. That said, no method of electronic transmission or storage is 100% secure, and we continuously work to improve our security practices.",
+
+      "children.title": "Children's Privacy",
+      "children.body": "Smart AI is not directed at children under the age set by applicable local laws. If used by a minor, it should be done under a parent or guardian's supervision. Should we discover that we've collected data from a child without the necessary parental consent, we will take steps to delete that data promptly.",
+
+      "thirdParty.title": "Third-Party Services",
+      "thirdParty.intro": "Smart AI relies on a number of trusted external services to power its features, including:",
+      "thirdParty.items": [
+        "Google — for sign-in and account management.",
+        "Firebase — for infrastructure, sync, and analytics.",
+        "The AI providers you personally choose, accessed via your own API key."
+      ],
+      "thirdParty.note": "These services are governed by their own privacy policies, which we encourage you to review.",
+
+      "changes.title": "Changes to This Policy",
+      "changes.body": "We may update this privacy policy from time to time to reflect changes in the app or in legal requirements. The \"last updated\" date at the top of this page is generated automatically, and we'll make sure to notify you in-app of any material changes.",
+
+      "contact.title": "Contact Us",
+      "contact.body": "If you have any questions about this privacy policy or how we handle your data, we'd be glad to hear from you at the email below:",
+
+      "footer.rights": "All rights reserved"
+    }
+  };
+
+  /* ---------------- State ---------------- */
+  var state = {
+    lang: (navigator.language || "ar").toLowerCase().indexOf("ar") === 0 ? "ar" : "ar", // Arabic-first default
+    theme: window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  };
+
+  var root = document.documentElement;
+
+  /* ---------------- Apply language ---------------- */
+  function applyLanguage(lang) {
+    state.lang = lang;
+    var dict = I18N[lang];
+    root.setAttribute("lang", lang);
+    root.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    renderList("dataList", dict["data.items"]);
+    renderList("firebaseList", dict["firebase.items"]);
+    renderList("providersList", dict["providers.items"]);
+    renderList("thirdPartyList", dict["thirdParty.items"]);
+
+    var langBtn = document.querySelector("#langToggle .lang-current");
+    if (langBtn) langBtn.textContent = lang === "ar" ? "EN" : "AR";
+    document.getElementById("langToggle").setAttribute(
+      "aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية"
+    );
+
+    buildToc(dict);
+    updateDate(lang);
+  }
+
+  function renderList(elId, items) {
+    var ul = document.getElementById(elId);
+    if (!ul || !items) return;
+    ul.innerHTML = "";
+    items.forEach(function (text) {
+      var li = document.createElement("li");
+      li.textContent = text;
+      ul.appendChild(li);
+    });
+  }
+
+  /* ---------------- Date ---------------- */
+  function updateDate(lang) {
+    var el = document.getElementById("updatedDate");
+    if (!el) return;
+    var now = new Date();
+    var formatter = new Intl.DateTimeFormat(lang === "ar" ? "ar-EG" : "en-US", {
+      year: "numeric", month: "long", day: "numeric"
+    });
+    el.textContent = formatter.format(now);
+    el.setAttribute("datetime", now.toISOString().slice(0, 10));
+  }
+
+  /* ---------------- TOC (desktop rail + mobile chips) ---------------- */
+  function buildToc(dict) {
+    var list = document.getElementById("tocList");
+    var mobileTrack = document.getElementById("tocMobileTrack");
+    list.innerHTML = "";
+    mobileTrack.innerHTML = "";
+
+    SECTIONS.forEach(function (s) {
+      var label = dict[s.titleKey];
+
+      var li = document.createElement("li");
+      li.className = "toc-item";
+      li.dataset.target = s.id;
+      var a = document.createElement("a");
+      a.href = "#" + s.id;
+      a.textContent = label;
+      li.appendChild(a);
+      list.appendChild(li);
+
+      var chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "toc-chip";
+      chip.textContent = label;
+      chip.dataset.target = s.id;
+      chip.addEventListener("click", function () {
+        document.getElementById(s.id).scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      mobileTrack.appendChild(chip);
+    });
+  }
+
+  /* ---------------- Scrollspy ---------------- */
+  var spyObserver;
+  function setupScrollspy() {
+    if (spyObserver) spyObserver.disconnect();
+    var items = document.querySelectorAll(".toc-item");
+    var chips = document.querySelectorAll(".toc-chip");
+
+    spyObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+
+        items.forEach(function (it) { it.classList.toggle("is-active", it.dataset.target === id); });
+        chips.forEach(function (c) { c.classList.toggle("is-active", c.dataset.target === id); });
+
+        var activeIndex = SECTIONS.findIndex(function (s) { return s.id === id; });
+        var progress = document.getElementById("tocProgress");
+        if (progress && items.length) {
+          var activeEl = document.querySelector('.toc-item[data-target="' + id + '"]');
+          if (activeEl) {
+            var railTop = document.getElementById("tocList").getBoundingClientRect().top;
+            var elMid = activeEl.getBoundingClientRect().top + activeEl.offsetHeight / 2;
+            progress.style.height = Math.max(0, elMid - railTop) + "px";
+          }
+        }
+
+        var activeChip = document.querySelector('.toc-chip[data-target="' + id + '"]');
+        if (activeChip) activeChip.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+
+    document.querySelectorAll(".policy-card").forEach(function (card) { spyObserver.observe(card); });
+  }
+
+  /* ---------------- Reveal on scroll ---------------- */
+  function setupReveal() {
+    var reveal = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll(".policy-card").forEach(function (card) { reveal.observe(card); });
+  }
+
+  /* ---------------- Theme ---------------- */
+  function applyTheme(theme) {
+    state.theme = theme;
+    root.setAttribute("data-theme", theme);
+  }
+
+  /* ---------------- Ripple ---------------- */
+  function attachRipple(el) {
+    el.addEventListener("click", function (e) {
+      var rect = el.getBoundingClientRect();
+      var circle = document.createElement("span");
+      var size = Math.max(rect.width, rect.height);
+      circle.className = "ripple-circle";
+      circle.style.width = circle.style.height = size + "px";
+      circle.style.left = (e.clientX - rect.left - size / 2) + "px";
+      circle.style.top = (e.clientY - rect.top - size / 2) + "px";
+      el.appendChild(circle);
+      setTimeout(function () { circle.remove(); }, 650);
+    });
+  }
+
+  /* ---------------- Init ---------------- */
+  document.addEventListener("DOMContentLoaded", function () {
+    paintIcons(document);
+    applyTheme(state.theme);
+    applyLanguage(state.lang);
+    setupScrollspy();
+    setupReveal();
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("langToggle").addEventListener("click", function () {
+      applyLanguage(state.lang === "ar" ? "en" : "ar");
+      paintIcons(document);
+      setupScrollspy();
+    });
+
+    document.getElementById("themeToggle").addEventListener("click", function () {
+      applyTheme(state.theme === "light" ? "dark" : "light");
+    });
+
+    document.querySelectorAll(".ripple").forEach(attachRipple);
+  });
+})();
+
+</script>
+</body>
+</html>
